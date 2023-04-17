@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
+  color: #222;
+}
+
+.booklist {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.book img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.book {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5rem;
+  text-align: center;
+}
+
+.book h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* This will now work, because we have removed our
+inline style which was targetting the same element. */
+.book h4 {
+  color: #617d98;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
